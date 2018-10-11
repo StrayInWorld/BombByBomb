@@ -1,0 +1,26 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "Elevator",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_duration": 1.25,
+  "sample": 40,
+  "speed": 1,
+  "wrapMode": 0,
+  "curveData": {
+    "props": {
+      "y": [
+        {
+          "frame": 0,
+          "value": -439.6
+        },
+        {
+          "frame": 1.25,
+          "value": 505.7
+        }
+      ]
+    },
+    "paths": {}
+  },
+  "events": []
+}

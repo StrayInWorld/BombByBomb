@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+ <meta charset="UTF-8">
+ <title></title>
+</head>
+<body>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/swiper-3.3.1.jquery.min.js"></script>
+<script type="text/javascript">
+ /*
+  // startColor：开始颜色hex
+  // endColor：结束颜色hex
+  // step:几个阶级（几步）
+  */
+ function gradientColor(startColor,endColor,step){
+  startRGB = this.colorRgb(startColor);//转换为rgb数组模式
+  startR = startRGB[0];
+  startG = startRGB[1];
+  startB = startRGB[2];
+ 
+  endRGB = this.colorRgb(endColor);
+  endR = endRGB[0];
+  endG = endRGB[1];
+  endB = endRGB[2];
+ 
+  sR = (endR-startR)/step;//总差值
+  sG = (endG-startG)/step;
+  sB = (endB-startB)/step;
+ 
+  var colorArr = [];
+  for(var i=0;i<step;i++){
+   //计算每一步的hex值
+   var hex = this.colorHex('rgb('+parseInt((sR*i+startR))+','+parseInt((sG*i+startG))+','+parseInt((sB*i+startB))+')');
+   colorArr.push(hex);
+  }
+  return colorArr;
+ }
+ 
+
+ 
+
+ var gradient = new gradientColor([255,255,255],[0,0,0],10);
+ console.log(gradient);//控制台输出
+ 
+</script>
+</body>
+</html>
